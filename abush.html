@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abush</title>
+    <link rel="stylesheet" href="abush.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="../full website/moon.png" id="icon" alt="MOOD">
+        </nav>
+
+        <div class="user hide-details" id="userbox">
+            <img src="../animation/20230512_151545_1683908202573.png" onclick="openinfo()" alt="user photo">
+            <div class="info">
+                <h1>Amanuel Melkamu</h1>
+                <p>working as product manager at <span>Microsoft Inc.</span></p>
+                <p>from: California, United States</p>
+                <a href="#">Connect with us</a>
+            </div>
+            <div class="close-icon" onclick="closeinfo()"></div>
+        </div>
+    </div>
+
+    <script>
+        let userbox = document.getElementById("userbox");
+
+        function openinfo() {
+            userbox.classList.remove("hide-details");
+        }
+
+        function closeinfo() {
+            userbox.classList.add("hide-details");
+        }
+
+        // Dark/light mode toggle
+        var icon = document.getElementById("icon");
+        icon.onclick = function() {
+            document.body.classList.toggle("dark-theme");
+            icon.src = document.body.classList.contains("dark-theme") ? "sun.png" : "moon.png";
+        }
+    </script>
+</body>
+</html>
