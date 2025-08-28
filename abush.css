@@ -136,27 +136,32 @@ body {
 }
 
 .hide-details img {
-    transform: translateX(650px);
+    transform: translateX(500px);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
 }
 
 /* Tablet (medium screens) */
 @media screen and (max-width: 768px) {
     .user {
-        flex-direction: column;
-        margin: 80px auto;
-        align-items: center;
-    }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;          /* center container */
+    text-align: center;      /* center text inside info */
+    width: 100%;             /* full width to avoid odd centering */
+  }
 
-    .user img {
-        width: 200px;
-        margin-bottom: 20px;
-    }
+  .user img {
+    width: 200px;
+    margin: 0 auto 20px;     /* forces true horizontal center */
+    display: block;
+  }
 
-    .info {
-        padding: 10px 30px;
-        text-align: center;
-    }
+  .info {
+    padding: 10px 20px;      /* reduce padding so it doesn’t push layout */
+    max-width: 90%;          /* keeps text box balanced */
+  }
+    
 
     .info h1 {
         font-size: 50px;
